@@ -26,14 +26,22 @@ public class MainActivity extends AppCompatActivity {
         clienteController = new ClienteController(getApplicationContext());
 
         Cliente cliente = new Cliente(1,"Nathan","nathaniel3492@gmail.com");
+//
+//        if(clienteController.incluir(cliente)){
+//
+//            Toast.makeText(MainActivity.this,"Incluido com sucesso",Toast.LENGTH_LONG);
+//
+//        }else {
+//            Toast.makeText(MainActivity.this,"Não foi possivel fazer a inclução",Toast.LENGTH_LONG);
+//
+//        }
 
-        if(clienteController.incluir(cliente)){
+        if(clienteController.deleteByID("cliente",1)){
 
-            Toast.makeText(MainActivity.this,"Incluido com sucesso",Toast.LENGTH_LONG);
-
+            Toast.makeText(MainActivity.this,"Cliente removido com sucesso!!!",Toast.LENGTH_LONG);
         }else {
-            Toast.makeText(MainActivity.this,"Não foi possivel fazer a inclução",Toast.LENGTH_LONG);
 
+            Toast.makeText(MainActivity.this,"Não foi possivel fazer a remoção",Toast.LENGTH_LONG);
         }
 
 
